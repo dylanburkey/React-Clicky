@@ -1,0 +1,13 @@
+.wrapper {
+    background: rgb(175, 175, 175);
+    height: 100%;
+    background-origin: border-box;
+    background-image: url(https://images7.alphacoders.com/751/thumb-1920-751400.png);
+    display: flex;
+    background-size: cover;
+    background-position: 400px;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    overflow-y: auto;
+}
