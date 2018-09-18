@@ -4,21 +4,25 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
+    <script>
+        (function() {
+            if (sessionStorage.fonts) {
+                console.log("Fonts installed.");
+                document.documentElement.classList.add('wf-active');
+            } else {
+                console.log("No fonts installed.");
+            }
+        })();
+    </script>
 
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <!-- <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico"> -->
-
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
 
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
-
-    <!-- Google Font(s) -->
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
 
     <title>Rick and Morty</title>
 </head>
@@ -26,7 +30,24 @@
 <body>
 
     <div id="root"></div>
-
+    <script>
+        (function(d) {
+            var wf = d.createElement('script'),
+                s = d.scripts[0];
+            wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+            s.parentNode.insertBefore(wf, s);
+        })(document);
+        WebFontConfig = {
+            custom: {
+                families: ['Gugi', 'PT Serif'],
+                urls: ['https://fonts.googleapis.com/css?family=Gugi|PT+Serif']
+            },
+            timeout: 2000,
+            active: function() {
+                sessionStorage.fonts = true;
+            }
+        };
+    </script>
 </body>
 
 </html>

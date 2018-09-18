@@ -6,7 +6,7 @@ import Title from "./components/Title";
 import Container from "./Container";
 import Row from "./Row";
 import Column from "./Column";
-import friends from "./friends.json";
+import friends from "./rick-and-morty.json";
 import "./App.css";
 
 function shuffleFriends(array) {
@@ -15,7 +15,7 @@ function shuffleFriends(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
-};
+}
 
 class App extends Component {
     // Set this.state
@@ -78,8 +78,8 @@ class App extends Component {
             <
             Title >
             Try to click on each character, but don 't hit any duplicates, or
-            we 'll release the hounds!!! <
-            /Title>
+            we 'll release the hounds!!! < /
+            Title >
 
             <
             Container >
@@ -95,12 +95,12 @@ class App extends Component {
                     handleShuffle = { this.handleShuffle }
                     id = { friend.id }
                     image = { friend.image }
-                    /> <
-                    /Column>
+                    /> < /
+                    Column >
                 ))
             } <
-            /Row> <
-            /Container> <
+            /Row> < /
+            Container > <
             /Wrapper>
         );
     }
