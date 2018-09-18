@@ -3,10 +3,10 @@ import "./Nav.css";
 
 const Nav = props => (
     <nav role="banner" className="primary-header">
+        <h1 className="brand animated lightSpeedIn primary-logo">
+            <a className="site-logo" href="/clicky-game/">{props.title}</a>
+        </h1>
         <ul>
-            <li className="brand animated lightSpeedIn primary-logo">
-                <a className="site-logo" href="/clicky-game/">{props.title}</a>
-            </li>
 
             <li id="rw">{props.rightWrong}</li>
 
