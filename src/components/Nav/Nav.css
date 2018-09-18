@@ -3,7 +3,7 @@ nav.primary-header {
     color: #afafaf;
     display: flex;
     background-color: darkslategrey;
-    height: 3rem;
+    height: 2rem;
     font-family: 'Bungee', cursive;
 }
 
@@ -36,8 +36,13 @@ nav ul {
     display: flex;
     justify-content: space-evenly;
     width: 100%;
-    min-height: 4rem;
-    background: deepskyblue;
+    min-height: 3rem;
+    background: #fed420;
+}
+
+a.site-logo {
+    margin: 1em 0;
+    padding: 0;
 }
 
 @media only screen and (max-width: 750px) {
